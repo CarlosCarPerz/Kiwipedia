@@ -1,0 +1,81 @@
+:root {
+    --logo-titulo-size: 3.0rem;
+    --logo-sub-size: 1.4rem;
+    --search-size: 2.0rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo .logo-kiwi {
+    width: 90px;
+}
+.logo .logo-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo .logo-texto .titulo {
+    font-size: var(--logo-titulo-size);
+}
+.logo .logo-texto .subtitulo {
+    font-size: var(--logo-sub-size);
+}
+
+/* Buscador */
+
+.buscador {
+    width: calc(100% - 24px);
+    height: 44px;
+    margin: 0 12px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(169, 169, 169);
+}
+.buscador:hover {
+    border: 1px solid rgb(122, 122, 122);
+}
+.buscador input {
+    height: 100%;
+    width: 70%;
+    border: none;
+    outline: none;
+    font-size: var(--search-size);
+    padding: 0 8px;
+}
+.buscador select {
+    font-size: 1.2rem;
+    border: none;
+    margin: 0 8px;
+    cursor: pointer;
+    color: rgb(164, 164, 164);
+}
+.buscador figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 56px;
+    background-color: rgb(142, 224, 157);
+    cursor: pointer;
+}
+.buscador .logo-lupa {
+    width: 24px;
+}
