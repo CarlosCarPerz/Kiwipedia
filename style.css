@@ -14,7 +14,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 36px;
 }
 
 /* Logo */
@@ -39,20 +39,24 @@ header {
 }
 
 /* Buscador */
-
-.buscador {
+.search-container {
     width: calc(100% - 24px);
-    height: 44px;
+    display: flex;
     margin: 0 12px ;
+    height: 44px;
+}
+
+.search-container .buscador {
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     border: 1px solid rgb(169, 169, 169);
 }
-.buscador:hover {
+.search-container .buscador:hover {
     border: 1px solid rgb(122, 122, 122);
 }
-.buscador input {
+.search-container .buscador input {
     height: 100%;
     width: 70%;
     border: none;
@@ -67,15 +71,44 @@ header {
     cursor: pointer;
     color: rgb(164, 164, 164);
 }
-.buscador figure {
+.search-container figure {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     width: 56px;
-    background-color: rgb(142, 224, 157);
+    background-color: rgb(112, 210, 130);
     cursor: pointer;
 }
-.buscador .logo-lupa {
+.search-container figure:hover {
+    background-color: rgb(146, 225, 160);
+}
+.search-container figure .logo-lupa {
     width: 24px;
+    opacity: 0.5;
+}
+
+/* Main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-container {
+    margin: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.card-container .card {
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-container .card a {
+    color: rgb(112, 210, 130);
+    font-size: var(--logo-sub-size);
+    font-weight: 700;
+    text-decoration: none;
 }
