@@ -10,6 +10,9 @@
     box-sizing: border-box;
     font-size: 62.5%;
 }
+html {
+    font-size: 62.5%;
+}
 header {
     display: flex;
     flex-direction: column;
@@ -53,19 +56,27 @@ header {
     align-items: center;
     justify-content: space-between;
     border: 1px solid rgb(169, 169, 169);
+    position: relative;
 }
 .search-container .buscador:hover {
     border: 1px solid rgb(122, 122, 122);
 }
 .search-container .buscador input {
     height: 100%;
-    width: 70%;
+    width: 100%;
     border: none;
     outline: none;
     font-size: var(--search-size);
     padding: 0 8px;
 }
-.buscador select {
+.search-container .buscador input:focus {
+    border: 1px solid rgb(112, 210, 130);
+}
+.search-container label {
+    position: absolute;
+    right: 0;
+}
+.search-container .buscador select {
     font-size: 1.2rem;
     border: none;
     margin: 0 8px;
@@ -138,12 +149,36 @@ main {
     font-weight: bold;
     color: rgb(112, 210, 130);
     background-color: rgb(250, 250, 250);
+    cursor: pointer;
 }
 .boton-container .boton-leer span {
     font-size: 1.4rem;
     padding: 8px;
     height: 30px;
 }
-.boton-container .boton-leer img {
+.boton-container .boton-leer img:first-child {
     height: 20px;
+}
+.boton-container .flecha-abajo {
+    width: 8px;
+    height: 8px;
+}
+
+.sec-two {
+    width: calc(100% - 24px);
+    margin: 0 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-align: center;
+}
+.sec-two a {
+    color: rgb(112, 210, 130);
+    text-decoration: none;
+    margin-top: 4px;
+}
+.sec-two a:hover {
+    text-decoration: underline;
 }
